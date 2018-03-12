@@ -42,5 +42,11 @@ import Foundation
         let result =  phoneTest.evaluate(with: value)
         return result
     }
-    //waooo.
+    //waooo....
+    
+    func isValidInput(Input:String) -> Bool {
+        let RegEx = "\\A\\w{7,18}\\z"
+        let Test = NSPredicate(format:"SELF MATCHES %@", RegEx)
+        return Test.evaluate(with: Input)
+    }
 }
